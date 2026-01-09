@@ -17,11 +17,6 @@ body {
   left: 20px;
 }
 
-.header a {
-  display: inline-block;
-  text-decoration: none;
-}
-
 .logo {
   width: 120px;
   transition: transform 0.3s ease;
@@ -31,13 +26,53 @@ body {
   transform: scale(1.2);
 }
 
-/* CONTENEDOR */
-.ranking-container {
-  width: 520px;
-  margin: 80px auto;
+/* ================= BOTONES TIERS ================= */
+.tier-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 90px;
 }
 
-/* ITEM */
+.tier-buttons button {
+  padding: 14px 34px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  color: #0b1220;
+
+  background: linear-gradient(135deg, #ffd700, #4fa3ff);
+  box-shadow:
+    0 0 15px rgba(79, 163, 255, 0.4),
+    0 0 25px rgba(255, 215, 0, 0.2);
+
+  transition: 
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.tier-buttons button:hover {
+  transform: scale(1.12);
+  filter: brightness(1.1);
+  box-shadow:
+    0 0 20px rgba(79, 163, 255, 0.6),
+    0 0 35px rgba(255, 215, 0, 0.4);
+}
+
+.tier-buttons button:active {
+  transform: scale(1.05);
+}
+
+/* ================= CONTENEDOR ================= */
+.ranking-container {
+  width: 520px;
+  margin: 50px auto;
+}
+
+/* ================= ITEMS ================= */
 .rank-item {
   display: flex;
   align-items: center;
@@ -46,14 +81,14 @@ body {
   margin-bottom: 12px;
   border-radius: 16px;
   background: linear-gradient(90deg, #0f1b2d, #0b1626);
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .rank-item:hover {
   transform: scale(1.02);
 }
 
-/* TOP COLORS */
+/* ================= TOP COLORES ================= */
 .top1 {
   background: linear-gradient(90deg, #6b5b2a, #1a2230);
 }
@@ -66,26 +101,13 @@ body {
   background: linear-gradient(90deg, #4a3a2c, #1a2230);
 }
 
-.top1:hover {
-  background: linear-gradient(90deg, #8a7636, #222c3a);
-}
-
-.top2:hover {
-  background: linear-gradient(90deg, #4c6484, #222c3a);
-}
-
-.top3:hover {
-  background: linear-gradient(90deg, #6b4e36, #222c3a);
-}
-
-/* NÚMERO */
+/* ================= TEXTO ================= */
 .rank-number {
   width: 34px;
   font-weight: bold;
   font-size: 18px;
 }
 
-/* JUGADOR */
 .rank-player {
   display: flex;
   align-items: center;
@@ -93,28 +115,23 @@ body {
   flex: 1;
 }
 
-/* SKIN */
 .player-skin {
   width: 40px;
   height: 40px;
   border-radius: 8px;
   image-rendering: pixelated;
-  background: #00000050;
 }
 
-/* TOP 1 SKIN EXTRA */
 .top1 .player-skin {
   width: 46px;
   height: 46px;
 }
 
-/* TEXTO */
 .rank-name {
   font-size: 16px;
   font-weight: 600;
 }
 
-/* PUNTOS */
 .rank-points {
   font-size: 16px;
   font-weight: bold;
@@ -128,10 +145,17 @@ body {
 
 .silver {
   color: #cfd8dc;
-  font-size: 17px;
 }
 
 .bronze {
   color: #cd7f32;
-  font-size: 17px;
+}
+
+/* ================= TIERS ================= */
+.tier {
+  display: none;
+}
+
+.tier.activo {
+  display: block;
 }
