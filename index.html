@@ -7,14 +7,21 @@
 </head>
 <body>
 
-  <!-- LOGO CLICKEABLE -->
-  <header class="header">
-    <a href="https://discord.gg/74XGvcZxNX" target="_blank">
-      <img src="logo.png" alt="MC Tiers" class="logo">
-    </a>
-  </header>
+<!-- LOGO -->
+<header class="header">
+  <a href="https://discord.gg/74XGvcZxNX" target="_blank">
+    <img src="logo.png" alt="MC Tiers" class="logo">
+  </a>
+</header>
 
-  <!-- RANKING -->
+<!-- BOTONES -->
+<div class="tier-buttons">
+  <button onclick="mostrarTier(1)">Tiers</button>
+  <button onclick="mostrarTier(2)">Temporadas</button>
+</div>
+
+<!-- ================= TIERS ================= -->
+<section id="tier1" class="tier activo">
   <main class="ranking-container">
 
     <div class="rank-item top1">
@@ -108,6 +115,40 @@
     </div>
 
   </main>
+</section>
+
+<!-- ================= Temporadas ================= -->
+<section id="tier2" class="tier">
+  <main class="ranking-container">
+
+    <div class="rank-item top1">
+      <span class="rank-number">1.</span>
+      <div class="rank-player">
+        <img src="https://minotar.net/helm/ezequielking2007/32" class="player-skin">
+        <span class="rank-name">Temporada 1 / ezequielking2007</span>
+      </div>
+      <span class="rank-points gold">39</span>
+    </div>
+
+    <div class="rank-item top2">
+      <span class="rank-number">2.</span>
+      <div class="rank-player">
+        <img src="https://minotar.net/helm/steve/32" class="player-skin">
+        <span class="rank-name">???</span>
+      </div>
+      <span class="rank-points silver">???</span>
+    </div>
+
+  </main>
+</section>
+
+<script>
+  function mostrarTier(num) {
+    document.getElementById("tier1").classList.remove("activo");
+    document.getElementById("tier2").classList.remove("activo");
+    document.getElementById("tier" + num).classList.add("activo");
+  }
+</script>
 
 </body>
 </html>
