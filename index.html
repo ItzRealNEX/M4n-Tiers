@@ -2,155 +2,153 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>MC Tiers Ranking</title>
+  <title>DCode Events</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="home">
 
-<!-- LOGO -->
-<header class="header">
-  <a href="https://discord.gg/74XGvcZxNX" target="_blank">
-    <img src="logo.png" alt="MC Tiers" class="logo">
-  </a>
+<!-- HEADER -->
+<header>
+  <div class="nav">
+    <nav>
+      <a href="#info">Información</a>
+      <a href="#modes">Proyectos</a>
+      <a href="#staff">Staff</a>
+    </nav>
+  </div>
 </header>
 
-<!-- BOTONES -->
-<div class="tier-buttons">
-  <button onclick="mostrarTier(1)">Tiers</button>
-  <button onclick="mostrarTier(2)">Temporadas</button>
-</div>
+<!-- LOGO FLOTANTE -->
+<a href="https://discord.gg/DzQ7uzMz9s" target="_blank" class="floating-logo">
+  <img src="logo.png" alt="DCode Events Logo">
+</a>
 
-<!-- ================= TIERS ================= -->
-<section id="tier1" class="tier activo">
-  <main class="ranking-container">
-
-    <div class="rank-item top1">
-      <span class="rank-number">1.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/ezequielking2007/32" class="player-skin">
-        <span class="rank-name">ezequielking2007 (FINALIZADO)</span>
-      </div>
-      <span class="rank-points gold">45</span>
-    </div>
-
-    <div class="rank-item top2">
-      <span class="rank-number">2.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/NotRealNEX/32" class="player-skin">
-        <span class="rank-name">NotRealNEX (FINALIZADO)</span>
-      </div>
-      <span class="rank-points silver">44</span>
-    </div>
-
-    <div class="rank-item top3">
-      <span class="rank-number">3.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/Roier2007/32" class="player-skin">
-        <span class="rank-name">Roier2007 (FINALIZADO)</span>
-      </div>
-      <span class="rank-points bronze">32</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">4.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/yRemix1/32" class="player-skin">
-        <span class="rank-name">yRemix1</span>
-      </div>
-      <span class="rank-points">27</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">5.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/BrokenM4n/32" class="player-skin">
-        <span class="rank-name">BrokenM4n</span>
-      </div>
-      <span class="rank-points">16</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">6.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/lucianoa08/32" class="player-skin">
-        <span class="rank-name">lucianoa08 (FINALIZADO)</span>
-      </div>
-      <span class="rank-points">12</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">7.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/The_Hakai/32" class="player-skin">
-        <span class="rank-name">The_Hakai</span>
-      </div>
-      <span class="rank-points">8</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">8.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/ImCrisGod/32" class="player-skin">
-        <span class="rank-name">ImCrisGod [Tier Bloqueada]</span>
-      </div>
-      <span class="rank-points">5</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">9.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/Steve/32" class="player-skin">
-        <span class="rank-name">???</span>
-      </div>
-      <span class="rank-points">—</span>
-    </div>
-
-    <div class="rank-item">
-      <span class="rank-number">10.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/Steve/32" class="player-skin">
-        <span class="rank-name">???</span>
-      </div>
-      <span class="rank-points">—</span>
-    </div>
-
-  </main>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="badge">DCode Events</span>
+    <h1>Quienes Somos?</h1>
+    <p>
+      DCode Events es un servidor dedicado a recrear experiencias de Minecraft
+      lo más vanilla posible, con eventos y proyectos únicos para la comunidad.Antes conocidos como Pixels Studios.
+    </p>
+  </div>
 </section>
 
-<!-- ================= Temporadas ================= -->
-<section id="tier2" class="tier">
-  <main class="ranking-container">
-
-    <div class="rank-item top1">
-      <span class="rank-number">1.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/ezequielking2007/32" class="player-skin">
-        <span class="rank-name">Temporada 1 / ezequielking2007</span>
-      </div>
-      <span class="rank-points gold">44</span>
-    </div>
-
-    <div class="rank-item top2">
-      <span class="rank-number">2.</span>
-      <div class="rank-player">
-        <img src="https://minotar.net/helm/steve/32" class="player-skin">
-        <span class="rank-name">???</span>
-      </div>
-      <span class="rank-points silver">???</span>
-    </div>
-
-  </main>
+<!-- INFO -->
+<section id="info" class="section">
+  <h2>Información</h2>
+  <p class="section-text">
+    Creamos eventos y servidores temporales enfocados en la jugabilidad original,
+    la competitividad justa y una experiencia cuidada al detalle.
+  </p>
 </section>
 
+<!-- MODES -->
+<section id="modes" class="section dark">
+  <h2>Proyectos</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>DCode UHC</h3>
+      <p>
+        Servidor Hardcore UHC donde los jugadores deberán prepararse antes del
+        enfrentamiento PvP en un entorno completamente vanilla.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Próximamente</h3>
+      <p>
+        Nuevos proyectos están en desarrollo para ampliar la experiencia del servidor.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Próximamente</h3>
+      <p>
+        Eventos especiales y modalidades experimentales llegarán muy pronto.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- STAFF -->
+<section id="staff" class="section">
+  <h2>Nuestro Staff</h2>
+  <p class="section-text">
+    Un equipo NO profesional comprometido con la calidad y el crecimiento del servidor.
+  </p>
+
+  <div class="staff-grid">
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/BrokenM4n/120">
+      <span class="role admin">PATRON</span>
+      <h4>BrokenM4n</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/ezequielking2007/120">
+      <span class="role dev">OWNER</span>
+      <h4>ezequielking2007</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/lucianoa08/120">
+      <span class="role mod">OWNER</span>
+      <h4>lucianoa08</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/ImCrisGod/120">
+      <span class="role mod">OWNER</span>
+      <h4>ImCrisGod</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/The_Hakai/120">
+      <span class="role mod">OWNER</span>
+      <h4>The_Hakai</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/yRemix1/120">
+      <span class="role mod">OWNER</span>
+      <h4>yRemix1</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/ItzRealNEX_/120">
+      <span class="role helper">ADMIN</span>
+      <h4>ItzRealNEX_</h4>
+    </div>
+
+    <div class="staff-card">
+      <img src="https://mc-heads.net/avatar/bygamer91yt/120">
+      <span class="role helper">HELPER</span>
+      <h4>Bygamer91yt</h4>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 DCode Events — Comunidad ESP de Minecraft</p>
+</footer>
+
+<!-- FIX CARGAR ARRIBA -->
 <script>
-  function mostrarTier(num) {
-    document.getElementById("tier1").classList.remove("activo");
-    document.getElementById("tier2").classList.remove("activo");
-    document.getElementById("tier" + num).classList.add("activo");
+  if (window.location.hash) {
+    history.replaceState(null, null, window.location.pathname);
+    window.scrollTo(0, 0);
   }
 </script>
 
 </body>
 </html>
-
-
