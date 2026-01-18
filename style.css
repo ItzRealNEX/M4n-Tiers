@@ -1,161 +1,253 @@
+/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  min-height: 100vh;
-  background: radial-gradient(circle at top, #12243b, #050b14);
-  color: white;
+  background: #050507;
+  color: #e5e7eb;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  background: rgba(5,5,7,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #0f172a;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* LOGO */
-.header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-.logo {
-  width: 120px;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.2);
-}
-
-/* ================= BOTONES TIERS ================= */
-.tier-buttons {
+.logo-link {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 90px;
+  align-items: center;
 }
 
-.tier-buttons button {
-  padding: 14px 34px;
-  border-radius: 999px;
-  border: none;
+.logo-img {
+  height: 42px;
+  transition: transform 0.35s ease, filter 0.35s ease;
   cursor: pointer;
-  font-size: 17px;
-  font-weight: bold;
-  color: #0b1220;
-
-  background: linear-gradient(135deg, #ffd700, #4fa3ff);
-  box-shadow:
-    0 0 15px rgba(79, 163, 255, 0.4),
-    0 0 25px rgba(255, 215, 0, 0.2);
-
-  transition: 
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    filter 0.25s ease;
 }
 
-.tier-buttons button:hover {
+.logo-img:hover {
   transform: scale(1.12);
-  filter: brightness(1.1);
-  box-shadow:
-    0 0 20px rgba(79, 163, 255, 0.6),
-    0 0 35px rgba(255, 215, 0, 0.4);
+  filter: drop-shadow(0 0 12px rgba(59,130,246,0.6));
 }
 
-.tier-buttons button:active {
-  transform: scale(1.05);
+/* NAV */
+nav a {
+  margin-left: 28px;
+  color: #cbd5f5;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* ================= CONTENEDOR ================= */
-.ranking-container {
-  width: 520px;
-  margin: 50px auto;
+nav a:hover {
+  color: #3b82f6;
 }
 
-/* ================= ITEMS ================= */
-.rank-item {
+/* HERO */
+.hero {
+  height: 100vh;
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 16px 20px;
-  margin-bottom: 12px;
-  border-radius: 16px;
-  background: linear-gradient(90deg, #0f1b2d, #0b1626);
-  transition: transform 0.2s ease;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #0b1220, #050507);
+  padding: 0 20px;
 }
 
-.rank-item:hover {
-  transform: scale(1.02);
+.hero-content {
+  max-width: 820px;
 }
 
-/* ================= TOP COLORES ================= */
-.top1 {
-  background: linear-gradient(90deg, #6b5b2a, #1a2230);
+.badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 22px;
 }
 
-.top2 {
-  background: linear-gradient(90deg, #3a4c63, #1a2230);
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 22px;
 }
 
-.top3 {
-  background: linear-gradient(90deg, #4a3a2c, #1a2230);
-}
-
-/* ================= TEXTO ================= */
-.rank-number {
-  width: 34px;
-  font-weight: bold;
+.hero p {
   font-size: 18px;
+  color: #94a3b8;
 }
 
-.rank-player {
+/* SECTIONS */
+.section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 120px 20px;
+  text-align: center;
+  scroll-margin-top: 100px;
+}
+
+.section h2 {
+  font-size: 38px;
+  margin-bottom: 18px;
+}
+
+.section-text {
+  max-width: 720px;
+  margin: auto;
+  color: #94a3b8;
+}
+
+.dark {
+  background: #07070c;
+  border-radius: 24px;
+  box-shadow: inset 0 0 0 1px #0f172a;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.card {
+  background: linear-gradient(180deg, #0b0b14, #07070c);
+  padding: 34px;
+  border-radius: 20px;
+  border: 1px solid #0f172a;
+  transition: 0.35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+}
+
+/* STAFF */
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.staff-card {
+  background: linear-gradient(180deg, #0b0b14, #07070c);
+  border: 1px solid #0f172a;
+  border-radius: 22px;
+  padding: 36px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.35s;
+}
+
+.staff-card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+}
+
+.staff-card img {
+  width: 110px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+}
+
+/* ROLES */
+.role {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 11px;
+  margin: 10px 0;
+  font-weight: 700;
+}
+
+/* PATRON */
+.role.admin {
+  background: rgba(168,85,247,0.18);
+  color: #a855f7;
+}
+
+/* OWNER */
+.role.dev,
+.role.mod {
+  background: rgba(239,68,68,0.18);
+  color: #ef4444;
+}
+
+/* ADMIN */
+.role.helper {
+  background: rgba(59,130,246,0.18);
+  color: #3b82f6;
+}
+
+/* FOOTER */
+footer {
+  padding: 35px;
+  text-align: center;
+  border-top: 1px solid #0f172a;
+  color: #64748b;
+}
+
+/* LOGO */
+.logo-link {
   display: flex;
   align-items: center;
-  gap: 14px;
-  flex: 1;
+  height: 42px; /* altura fija para NO agrandar el header */
 }
 
-.player-skin {
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  image-rendering: pixelated;
+.logo-img {
+  height: 760px; /* tamaño base */
+  transform: scale(1.4); /* ⬅️ agranda SOLO la imagen */
+  transform-origin: left center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  cursor: pointer;
 }
 
-.top1 .player-skin {
-  width: 46px;
-  height: 46px;
+.logo-img:hover {
+  transform: scale(2.5);
+  filter: drop-shadow(0 0 18px rgba(88,101,242,0.7));
 }
 
-.rank-name {
-  font-size: 16px;
-  font-weight: 600;
+/* LOGO FUERA DEL HEADER */
+.floating-logo {
+  position: fixed;
+  top: 44px; /* debajo del header */
+  left: 24px;
+  z-index: 200;
 }
 
-.rank-points {
-  font-size: 16px;
-  font-weight: bold;
-  color: #6fb1ff;
+.floating-logo img {
+  height: 100px;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  cursor: pointer;
 }
 
-.gold {
-  color: #ffd700;
-  font-size: 18px;
-}
-
-.silver {
-  color: #cfd8dc;
-}
-
-.bronze {
-  color: #cd7f32;
-}
-
-/* ================= TIERS ================= */
-.tier {
-  display: none;
-}
-
-.tier.activo {
-  display: block;
+.floating-logo img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 20px rgba(88,101,242,0.75));
 }
